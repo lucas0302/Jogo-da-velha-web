@@ -42,3 +42,8 @@ function isWin() {
     }
     return false;
 }
+function reset() {
+    playerTime = 0;
+    symbols = ['o', 'x'];
+    gameOver = false;
+}
