@@ -1,3 +1,17 @@
+(()=>{
+    const stage= document.querySelector(".stage");
+    for (let i = 0;i<3 ;i++){
+        stage.innerHTML += `<div>
+        <div id="${i*3}" class="square"></div>
+        <div id="${i*3+1}" class="square">
+        </div>
+        <div id="${i*3+2}" class="square"></div>
+    </div>`
+    
+    }
+})()
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
     let squares = document.querySelectorAll(".square");
@@ -6,9 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 })
 function handleClick(event) {
-    let square = event.target;
-    let position = square.id;
-
+    let position = event.target.id;
     if (handleMove(position)) {
         setTimeout(() => {
             alert("O jogo acabou e o jogador " + playerTime + " foi o vencedor");
@@ -22,6 +34,7 @@ function updateSquare(position){
     let Symbols = board[position];
     square.innerHTML = `<div class= '${Symbols}'></div>`
 }
+
 function reset(){
     board = ["", "", "", "", "", "", "", "", ""]
     board.forEach((o, i)=>{
