@@ -40,9 +40,17 @@ position: relative;
         right: 0;
     }
 button{
-    width: 80px;
+    width: 100px;
     height: 40px;
-    background-color:green;
-    border:none;
-    border-radius: 10px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    background-color:rgba(50, 187, 153, 0.384);
+    border:1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button:hover{
+    background-color:rgba(50, 187, 153, 0.774);
+    cursor: pointer;
 }
