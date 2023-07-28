@@ -22,5 +22,13 @@ function updateSquare(position){
     let Symbols = board[position];
     square.innerHTML = `<div class= '${Symbols}'></div>`
 }
-
+function reset(){
+    board = ["", "", "", "", "", "", "", "", ""]
+    board.forEach((o, i)=>{
+        let square = document.getElementById(i.toString());
+        square.innerHTML = `<div></div>`
+    })
+    playerTime = 0
+    gameOver = false
+}
 
